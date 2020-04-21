@@ -21,13 +21,13 @@
 	$ phpize
 	$ ./configure
 
-![](https://lh3.googleusercontent.com/-DdgEiYR4N3o/Urf7JkFnsWI/AAAAAAAAAQc/1PwjHCn9ofc/w682-h289-no/gearman-1.PNG)
+![](/assets/gearman-1.PNG)
 
 	$ make && make install
 
-![](https://lh3.googleusercontent.com/-eFgfIdRNzvQ/Urf7J4qYxqI/AAAAAAAAAQk/bAvHRNXD5ZQ/w925-h342-no/gearman-2.PNG)
+![](/assets/gearman-2.PNG)
 
-![](https://lh3.googleusercontent.com/-uh3VAs5GIuA/Urf7KZJ0V4I/AAAAAAAAAQo/0Qn74XHuiNc/w595-h46-no/gearman-3.PNG)
+![](/assets/gearman-3.PNG)
 
 最後在 `php.ini` 加上 module
 
@@ -40,7 +40,7 @@
 
 這樣 php 就支援 gearman 囉
 
-![](https://lh5.googleusercontent.com/-Fz8SUBmKa50/Urf7_zd8zrI/AAAAAAAAARE/CKofvbgBF3g/w441-h385-no/gearman-4.PNG)
+![](/assets/gearman-4.PNG)
 
 ## Hello World
 

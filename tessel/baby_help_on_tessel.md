@@ -8,7 +8,7 @@
 - [Ambient Module][1]
 - [Camera Module][2]
 
-![](https://lh4.googleusercontent.com/-JkU--pBySec/VVAai6SICUI/AAAAAAAABVU/dFl5MSHd30Y/w788-h591-no/IMG_3953.JPG)
+![](/assets/IMG_3953.JPG)
 
 # 聲音偵測
 
@@ -62,7 +62,7 @@
 
 只是畫素很差...
 
-![](https://lh5.googleusercontent.com/-cs7GuOMqS8w/VU-PVa0V8jI/AAAAAAAABVA/15Jrn7mLtG0/w1098-h577-no/baby-help.png)
+![](/assets/baby-help.png)
 
 程式碼都放到 [Github][6] 了。
 
