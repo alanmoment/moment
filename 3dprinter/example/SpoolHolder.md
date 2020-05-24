@@ -58,7 +58,9 @@ https://www.thingiverse.com/thing:2179768
 
 ## Filament-Spool-Mount-Universal_-_Slider.stl
 
-基座2，需要水平擴展，列印成果，完全沒有牽絲，效果不錯
+基座2，第一次沒有設定水平擴展，結果太緊了(圖片是第一次列印)，
+
+後來又印第二次有開啟水平擴展，列印成果，完全沒有牽絲，效果不錯！
 
 ![](/assets/3dprinter/example/SpoolHolder/IMG_4670.jpg)
 
