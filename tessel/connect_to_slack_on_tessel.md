@@ -6,11 +6,11 @@
 
 首先得先擁有一組 Slack 的帳號與 Channel，再設置 Incoming WebHooks。
 
-![](/assets/incoming-webhooks.png)
+![](/assets/tessel/connect_to_slack_on_tessel/incoming-webhooks.png)
 
 便可取得 Webhook Url
 
-![](/assets/webhooks-url.png)
+![](/assets/tessel/connect_to_slack_on_tessel/webhooks-url.png)
 
 ## Tessel Wifi
 
@@ -102,7 +102,7 @@
 
 測試可以正常收到囉！！
 
-![](/assets/wifi-test-on-slack.png)
+![](/assets/tessel/connect_to_slack_on_tessel/wifi-test-on-slack.png)
 
 如此就可以應用在各種需要通知的狀況上，太棒了！
 

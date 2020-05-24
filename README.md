@@ -1,6 +1,6 @@
 # Who am I?
 
-![alanmoment](https://lh5.googleusercontent.com/-YOqhJnoAA_I/UdRFJ8_E71I/AAAAAAAAAD4/cj3Qp8JWmQI/w600-h381-no/P1030418.JPG)
+![alanmoment](/assets/README/P1030418.JPG)
 
 ### Skills
 

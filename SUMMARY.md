@@ -1,8 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
-* [3D Printer](3dprinter/README>md)
+* [3D Printer](3dprinter/README.md)
   * [Atom2.5EX 之血淚組裝](3dprinter/atom2.5ex/assemble.md)
+  * [列印經驗紀錄](3dprinter/example/README.md)
+    * [SpoolHolder](3dprinter/example/SpoolHolder.md)
 * [Kubernetes](kubernetes/README.md)
   * [使用Kops建立Kubernetes](kubernetes/kops/build_cluster_with_kops.md)
   * [使用HelmV2](kubernetes/helm/create_helmv2.md)

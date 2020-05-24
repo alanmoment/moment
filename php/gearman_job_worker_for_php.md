@@ -21,13 +21,13 @@
 	$ phpize
 	$ ./configure
 
-![](/assets/gearman-1.PNG)
+![](/assets/php/gearman_job_worker_for_php/gearman-1.PNG)
 
 	$ make && make install
 
-![](/assets/gearman-2.PNG)
+![](/assets/php/gearman_job_worker_for_php/gearman-2.PNG)
 
-![](/assets/gearman-3.PNG)
+![](/assets/php/gearman_job_worker_for_php/gearman-3.PNG)
 
 最後在 `php.ini` 加上 module
 
@@ -40,7 +40,7 @@
 
 這樣 php 就支援 gearman 囉
 
-![](/assets/gearman-4.PNG)
+![](/assets/php/gearman_job_worker_for_php/gearman-4.PNG)
 
 ## Hello World
 

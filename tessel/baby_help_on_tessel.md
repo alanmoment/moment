@@ -8,7 +8,7 @@
 - [Ambient Module][1]
 - [Camera Module][2]
 
-![](/assets/IMG_3953.JPG)
+![](/assets/tessel/baby_help_on_tessel/IMG_3953.JPG)
 
 # 聲音偵測
 
@@ -62,7 +62,7 @@
 
 只是畫素很差...
 
-![](/assets/baby-help.png)
+![](/assets/tessel/baby_help_on_tessel/baby-help.png)
 
 程式碼都放到 [Github][6] 了。
 

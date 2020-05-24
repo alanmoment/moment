@@ -75,7 +75,7 @@
 
 [My Gravatars](https://en.gravatar.com)申請帳號或登入，然後上傳一張自己可愛的大頭照
 
-![](/assets/000b0842599a61d1e66555ca8c045887-origin.jpg)
+![](/assets/mix/qing_zhu_octopress_kai_zhang/image1.jpg)
 
 接著在_config.yml配置email
 

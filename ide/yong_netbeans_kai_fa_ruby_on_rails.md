@@ -38,7 +38,7 @@ File→New Project
 
 建立project之後執行run，發現console有錯誤訊息如下
 
-![](/assets/netbeans_problem.png)
+![](/assets/ide/netbeans_consolezhong_wen_luan_ma_jie_jue_fang_fa/netbeans_problem.png)
 
 	WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
 
