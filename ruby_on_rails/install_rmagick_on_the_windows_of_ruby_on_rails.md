@@ -21,13 +21,13 @@ Windows上不管是要安裝什麼Ruby的套件總是能出錯，這次就連很
 
 將MinGW安裝在C:\MinGW，並且勾選MinGW Developer ToolKit，安裝完畢還要在系統的環境變數加上C:\MinGW
 
-![mingw](https://lh5.googleusercontent.com/-KECm3GxukMI/UgfGIQ0TS6I/AAAAAAAAAF8/IWx8hpI8vI0/w598-h491-no/mingw.PNG)
+![mingw](/assets/ruby_on_rails/install_rmagick_on_the_windows_of_ruby_on_rails/mingw.PNG)
 
 最後用gem安裝rmagick
 
 	$ gem install rmagick --platform=ruby -- --with-opt-lib=C:/ImageMagick --with-opt-include=c:/ImageMagick/SourceCode
 
-![rmagick_down](https://lh5.googleusercontent.com/-0P8HhDZ4J5E/UgfGIcLG1wI/AAAAAAAAAGE/Jni3b_AAf9E/w921-h139-no/rmagick_down.PNG)
+![rmagick_down](/assets/ruby_on_rails/install_rmagick_on_the_windows_of_ruby_on_rails/rmagick_down.PNG)
 
 Gemfile setup
 

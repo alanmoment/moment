@@ -63,7 +63,7 @@
 
 真的成功了...哈!!
 
-![gitlab 6.0](https://lh6.googleusercontent.com/-f_Ruym_yx-k/Uik-NeJFm9I/AAAAAAAAAMo/xZzJxjPDpkU/w519-h466-no/gitlab6.0.PNG)
+![gitlab 6.0](/assets/cooperation/gitlab/gitlab_41_upgrade_to_gitlab_60chao_tou_lan_fang_fa/gitlab6.0.PNG))
 
 這中間遇到了一些問題，因為redis我有另外使用，所以沒有bind IP，也開了requirepass致使我的redis一直無法被gitlab正常使用，最後修改redis.conf才可以正常安裝。
 

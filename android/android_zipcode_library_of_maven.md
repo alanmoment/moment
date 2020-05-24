@@ -2,9 +2,9 @@
 
 最近在做Android app時需要用到縣市、區域這些資料，做過網站的，都知道處理這個很煩啊!所以大多都會抽出來另外處理，封裝成Component好方便使用，但是在Android上要是把縣市、區域、郵遞區號放到strings.xml裡面，我想是會瘋掉的，維護、擴充也不容易。我就是建完才後悔的...
 
-![android studio city list](https://lh5.googleusercontent.com/-TmHwJ0cK8AE/UiVUcNB_W4I/AAAAAAAAAI8/rd02S3fJjgM/w388-h244-no/android+studio+city+list.PNG)
+![android studio city list](/assets/android/android_zipcode_library_of_maven/android_studio_city_list.PNG)
 
-![android studio area list](https://lh6.googleusercontent.com/-qZI1udzOqIU/UiVUcMD6JvI/AAAAAAAAAI4/SMF7zw8n2vQ/w357-h196-no/android+studio+area+list.PNG)
+![android studio area list](/assets/android/android_zipcode_library_of_maven/android_studio_area_list.PNG)
 
 有個不錯的方法就是將資料用json的格式存成一隻檔案，然後自己寫抓取json的util放到Android的libs，這樣要使用就很方便了。
 
@@ -42,15 +42,15 @@
 
 Step 1.
 
-![create maven project step 1](https://lh4.googleusercontent.com/-DIiAQAtg_L4/UiWSDSUs0wI/AAAAAAAAAJo/bQ3TINy1dBw/w519-h472-no/create+maven+project.PNG)
+![create maven project step 1](/assets/android/android_zipcode_library_of_maven/create_maven_project.PNG)
 
 Step 2.
 
-![create maven project step 2](https://lh6.googleusercontent.com/-oVJkdSqThbE/UiWSDSs_DGI/AAAAAAAAAJY/j0qLEPelwsQ/w614-h268-no/create+maven+project+2.PNG)
+![create maven project step 2](/assets/android/android_zipcode_library_of_maven/create_maven_project2.PNG)
 
 Step 3.
 
-![create maven project step 3](https://lh5.googleusercontent.com/-6x01Hr44Rxw/UiW-DTzxcBI/AAAAAAAAAME/ddrbF3yMHHg/w619-h130-no/create+maven+project+step+3.PNG)
+![create maven project step 3](/assets/android/android_zipcode_library_of_maven/create_maven_project_step3.PNG)
 
 ### 修改pom.xml
 
@@ -62,17 +62,17 @@ Step 3.
 
 在project中Maven Dependencies就會增加gson library
 
-![gson dependencies](https://lh6.googleusercontent.com/-2QPdtz9RYRw/UiWTong0uUI/AAAAAAAAAKA/8zbdFGsia-c/w303-h63-no/gson+dependencies.PNG)
+![gson dependencies](/assets/android/android_zipcode_library_of_maven/gson_dependencies.PNG)
 
 ### 建立zipcode.json
 
 依照下圖的格式建立zipcode.json
 
-![zipcode.json](https://lh5.googleusercontent.com/-hv_SKaEiBsc/UiQQShkssYI/AAAAAAAAAH8/r3RUpQjG5Uw/w517-h329-no/zipcode_json.PNG)
+![zipcode.json](/assets/android/android_zipcode_library_of_maven/zipcode_json.PNG)
 
 將zipcode.json放置在src/main/resources，並且修改pom.xml，這樣在使用maven install就能夾帶檔案。
 
-在<project></project>\>標籤中加入
+在`<project></project>`標籤中加入
 
 	<build><resources><resource><directory>src/main/resources</directory><includes><include>zipcode.json</include></includes></resource></resources></build>
 

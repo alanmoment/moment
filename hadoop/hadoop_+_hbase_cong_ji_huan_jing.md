@@ -129,5 +129,3 @@
 [https://sites.google.com/site/waue0920/Home/hbase/hbase-cong-ji-an-zhuang](https://sites.google.com/site/waue0920/Home/hbase/hbase-cong-ji-an-zhuang) 
 
 > Jun 17th, 2013 2:32:00pm
-
-> hadoop, hbase

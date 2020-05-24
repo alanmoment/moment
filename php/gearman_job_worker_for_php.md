@@ -6,24 +6,32 @@
 
 在 CentOS 中可以直接用 `yum` 安裝
 
-	$ yum install -y gearmand
+```
+$ yum install -y gearmand
+```
 
 ## 安裝 Gearman 依賴包
 
-	$ yum -y install re2c geoip geoip-data geoip-devel gcc* boost* libgearman*
+```
+$ yum -y install re2c geoip geoip-data geoip-devel gcc* boost* libgearman*
+```
 
 這兩個步驟都很簡單
 
 ## 安裝 PHP 的 Gearman extension
 
-	$ wget http://pecl.php.net/get/gearman-1.1.1.tgz
-	$ cd gearman-1.1.1
-	$ phpize
-	$ ./configure
+```
+$ wget http://pecl.php.net/get/gearman-1.1.1.tgz
+$ cd gearman-1.1.1
+$ phpize
+$ ./configure
+```
 
 ![](/assets/php/gearman_job_worker_for_php/gearman-1.PNG)
 
-	$ make && make install
+```
+$ make && make install
+```
 
 ![](/assets/php/gearman_job_worker_for_php/gearman-2.PNG)
 
@@ -31,12 +39,16 @@
 
 最後在 `php.ini` 加上 module
 
-	$ vim /etc/php.ini
-	extension="gearman.so"
+```
+$ vim /etc/php.ini
+extension="gearman.so"
+```
 
 儲存後重新啟動
 
-	$ service httpd restart
+```
+$ service httpd restart
+```
 
 這樣 php 就支援 gearman 囉
 
@@ -48,33 +60,41 @@
 
 首先建立一隻 worker.php
 
-	$ vim worker.php
-	<?php $worker= new GearmanWorker();
-		$worker->addServer();
-		$worker->addFunction("reverse", "my_reverse_function");
-		while ($worker->work());
-		
-		function my_reverse_function($job)
-		{
-		  return strrev($job->workload());
-		}
-	?>
+```
+$ vim worker.php
+<?php $worker= new GearmanWorker();
+	$worker->addServer();
+	$worker->addFunction("reverse", "my_reverse_function");
+	while ($worker->work());
+	
+	function my_reverse_function($job)
+	{
+		return strrev($job->workload());
+	}
+?>
+```
 
 再建立一隻 client.php
 
-	$ vim client.php
-	<?php $client= new GearmanClient();
-		$client->addServer();
-		print $client->do("reverse", "Hello World!");
-	?>
+```
+$ vim client.php
+<?php $client= new GearmanClient();
+	$client->addServer();
+	print $client->do("reverse", "Hello World!");
+?>
+```
 
 然後執行 worker
 
-	$ php worker.php
+```
+$ php worker.php
+```
 
 再執行 client 就可以得到 Hello World 了
 
-	$ php client.php 
+```
+$ php client.php 
+```
 
 若要停止這個 job worker 可以用 `Ctrl + C`
 

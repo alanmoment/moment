@@ -4,6 +4,10 @@ https://www.thingiverse.com/thing:2179768
 
 ![](/assets/3dprinter/example/SpoolHolder/IMG_4685.jpg)
 
+每一次的成功背後總是失敗很多次...一天就過去了
+
+![](/assets/3dprinter/example/SpoolHolder/IMG_4687.jpg)
+
 ## 列印機種
 
 1. 列印機種：ATOM 2.5 EX
@@ -154,7 +158,11 @@ https://www.thingiverse.com/thing:2179768
 
 所以印了兩次，第一次沒有補充完全不行，第二次水平擴展設定 +0.1 mm 但是還是太鬆了。
 
-懶得列印所以直接用黏的，看來必須要補到 +0.2 mm，因為螺紋印件是 -0.2 mm
+懶得列印原本想直接用黏的，但是黏不緊，所以最後還是重新列印，把水平擴展補到 +0.2 mm，因為螺紋印件是 -0.2 mm
+
+就 OK 了
+
+![](/assets/3dprinter/example/SpoolHolder/IMG_4686.jpg)
 
 ### 品質
 

@@ -11,56 +11,74 @@
 ### 安装Node.js前置作業
 
 Node.js 0.8.5的安裝，需要python 2.7，大部分安装失敗，都是因為python版本過低。
- 
-	$ python -V
-	Python 2.4.3
+
+```
+$ python -V
+Python 2.4.3
+```
 
 Node.js 0.8.5依賴的library
 
-	$ yum install -y bzip2*
+```
+$ yum install -y bzip2*
+```
 
 開始安裝python
 
-	$ wget http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
-	$ tar zvxf Python-2.7.3.tgz
-	$ cd Python-2.7.3
-	$ ./configure
-	$ make && make install
+```
+$ wget http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
+$ tar zvxf Python-2.7.3.tgz
+$ cd Python-2.7.3
+$ ./configure
+$ make && make install
+```
 
 因為系統預設是指向2.4.3，所以要重新建立連接，但是yum是在python 2.4.3才可以正常使用，所以不要隨便移除。
 
-	$ mv /usr/bin/python  /usr/bin/python.bak
-	$ ln -s /usr/local/bin/python2.7 /usr/bin/python
+```
+$ mv /usr/bin/python  /usr/bin/python.bak
+$ ln -s /usr/local/bin/python2.7 /usr/bin/python
+```
 
 檢查python指向是否成功
 
-	$ python -V   
-	Python 2.7.3
+```
+$ python -V   
+Python 2.7.3
+```
 
 ### 安裝Node.js
 
 可以到官網選擇合適的版本[下載](http://nodejs.org/download/)也可以用[github](https://github.com/joyent/node)上的版本。
 
-	$ wget 'http://nodejs.org/dist/v0.8.5/node-v0.8.5.tar.gz'
-	$ tar zvxf node-v0.8.5.tar.gz
-	$ cd node-v0.8.5./configure
-	$ make && make install
+```
+$ wget 'http://nodejs.org/dist/v0.8.5/node-v0.8.5.tar.gz'
+$ tar zvxf node-v0.8.5.tar.gz
+$ cd node-v0.8.5./configure
+$ make && make install
+```
 
 安裝上實在是很簡單，而且不知道為什麼我這次重新體驗安裝Node.js 0.8.5版本沒遇到什麼問題，以前安裝的時候嚐到不少苦頭，但現在要我回想有什麼苦頭我也忘了，總之一切正常就好。
 
 ### 安裝NVM
 
-	$ git clone git://github.com/creationix/nvm.git ~/.nvm
-	$ source ~/.nvm/nvm.sh
+```
+$ git clone git://github.com/creationix/nvm.git ~/.nvm
+$ source ~/.nvm/nvm.sh
+```
 
 安裝並選擇版本。
 
-	$ nvm install 0.10
-	$ nvm use 0.10
+```
+$ nvm install 0.10
+$ nvm use 0.10
+```
 
 查看你有什麼版本
 
-	$ nvm ls
+```
+$ nvm ls
+```
 
 這樣就完成了
 
@@ -68,23 +86,27 @@ Node.js 0.8.5依賴的library
 
 不免俗的要來寫一段世界級的程式碼HelloWorld看Node.js是否可以正常運作。
 
-	$ mkdir /var/www/nodejs
-	$ cd /var/www/nodejs
-	$ vim HelloWorld.js
-	var http = require('http');
-	
-	http.createServer(function (req, res) {
-	  res.writeHead(200, {
-	    'Content-Type': 'text/plain'
-	  });
-	  res.end('Hello Node.js');}).listen(8124, "127.0.0.1");
-	
-	console.log('Server running at http://127.0.0.1:8124/');
+```
+$ mkdir /var/www/nodejs
+$ cd /var/www/nodejs
+$ vim HelloWorld.js
+var http = require('http');
+
+http.createServer(function (req, res) {
+	res.writeHead(200, {
+		'Content-Type': 'text/plain'
+	});
+	res.end('Hello Node.js');}).listen(8124, "127.0.0.1");
+
+console.log('Server running at http://127.0.0.1:8124/');
+```
 
 接下來啟動這一隻js
 
-	$ node HelloWorld.js
-	Server running at http://127.0.0.1:8124/
+```
+$ node HelloWorld.js
+Server running at http://127.0.0.1:8124/
+```
 
 現在你可以打開瀏覽器輸入 http://127.0.0.1:8124 這時就可以在command-line看到Hello Node.js的訊息了。
 
@@ -93,5 +115,3 @@ Node.js 0.8.5依賴的library
 [https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 
 > Jul 10th, 2013 5:04:00pm
-
-> nodejs

@@ -9,8 +9,10 @@
 ---
 
 download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
-	
-	$ python get-pip.py
+
+```
+$ python get-pip.py
+```
 
 ## Virtualenv
 
@@ -18,15 +20,19 @@ download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 
 **install**
 
-	$ pip install virtualenv
-	
+```
+$ pip install virtualenv
+```
+
 > Linux or OS X need `sudo`
 
 **setup**
 
-	$ virtualenv ENV
-	$ source ENV/bin/activate
-	
+```
+$ virtualenv ENV
+$ source ENV/bin/activate
+```
+
 啟動 virtualenv，從此只要在 virtualenv 下面安裝的 package 都只會存在于這個 virtualenv 當中。
 
 ## Virtualenvwrapper
@@ -40,44 +46,64 @@ download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 
 **install**
 
-	$ pip install virtualenvwrapper
+```
+$ pip install virtualenvwrapper
+```
 
 **新增虛擬環境**
 
-	$ mkvirtualenv [-i package] [-r requirements_file] [virtualenv options] ENVNAME
+```
+$ mkvirtualenv [-i package] [-r requirements_file] [virtualenv options] ENVNAME
+```
 
 **設定路徑**
 
-	export PIP_VIRTUALENV_BASE=$WORKON_HOME
+```
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+```
 
 **列出所有的虛擬環境**
 
-	$ lsvirtualenv
-	
+```
+$ lsvirtualenv
+```
+
 **移除虛擬環境**
 
-	$ rmvirtualenv ENVNAME
-	
+```
+$ rmvirtualenv ENVNAME
+```
+
 **複製虛擬環境**
 
-	$ cpvirtualenv ENVNAME TARGETENVNAME 
+```
+$ cpvirtualenv ENVNAME TARGETENVNAME 
+```
 
 **啟動虛擬環境**
 
-	$ workon [environment_name]
+```
+$ workon [environment_name]
+```
 
 **離開虛擬環境**
 
-	$ deactivate
-	
+```
+$ deactivate
+```
+
 **Python 3**
 
-	$ which python3
-	$ mkvirtualenv --python=/usr/bin/python3 python3
-	
+```
+$ which python3
+$ mkvirtualenv --python=/usr/bin/python3 python3
+```
+
 如果想要避免 pip 在沒有進入虛擬環境時被使用，可以在 ~/.bashrc 加上：
 
-	export PIP_REQUIRE_VIRTUALENV=true
+```
+export PIP_REQUIRE_VIRTUALENV=true
+```
 
 ## Build Django
 
@@ -85,68 +111,94 @@ download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 
 **install**
 
-	$ pip install django
-	
+```
+$ pip install django
+```
+
 **requirements**
 
-	$ pip install -r requirements.txt
-	$ pip freeze > requirements.txt		
-	
+```
+$ pip install -r requirements.txt
+$ pip freeze > requirements.txt		
+```
+
 ** start **
 
-	$ django-admin.py startproject PROJECT_NAME
+```
+$ django-admin.py startproject PROJECT_NAME
+```
 
 **run**
 
-	$ python manage.py runserver
+```
+$ python manage.py runserver
+```
 
 **create app**
 
-	$ python manage.py startapp APP_NAME
+```
+$ python manage.py startapp APP_NAME
+```
 
 **model**
 
 settings.py
 
-	INSTALLED_APPS = (
-		...
-		'customer'
-		...
-	)
-	
+```
+INSTALLED_APPS = (
+	...
+	'customer'
+	...
+)
+```
+
 models.py
 
-	class Customer(models.Model):
-    	content = models.TextField()
+````
+class Customer(models.Model):
+		content = models.TextField()
 
-    	def __unicode__(self):
-        	return self.content
-    
+		def __unicode__(self):
+				return self.content
+```
+
 `first`
-     	
-	$ python manage.py syncdb
-	
+
+```     	
+$ python manage.py syncdb
+```
+
 `Your models have changes`
 
-	$ python manage.py makemigrations
+```
+$ python manage.py makemigrations
+```
 
 `generate`
 
-	$ python manage.py migrate
+```
+$ python manage.py migrate
+```
 
 `single change`
 
-	$ python manage.py makemigrations MODEL
+```
+$ python manage.py makemigrations MODEL
+```
 
 `rollback`
 
-	$ python manage.py migrate system zero
+```
+$ python manage.py migrate system zero
+```
 
 ## Django TestCase
 
 **console usage**
 
-	$ python manage.py test
+```
+$ python manage.py test
+```
 
 ## Reference
 

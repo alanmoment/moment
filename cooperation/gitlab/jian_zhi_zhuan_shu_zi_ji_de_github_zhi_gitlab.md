@@ -128,11 +128,11 @@ Gitlab也需要伺服器來運作，可以選擇[Nginx](http://nginx.org/)，但
 
 預設帳號密碼是：admin@local.host / 5iveL!fe
 
-![Gitlab](https://lh4.googleusercontent.com/-r_4vQQ00_3k/UcEySwWMi6I/AAAAAAAAABQ/Y5P-U6waB18/w759-h560-no/gitlab.PNG)
+![Gitlab](/assets/cooperation/gitlab/jian_zhi_zhuan_shu_zi_ji_de_github_zhi_gitlab/gitlab.PNG)
 
 太爽啦。完成了。就是長這樣!!! 建立帳號登入看看吧
 
-![Gitlab sign in](https://lh4.googleusercontent.com/-vaWNRc_68To/UcEySw3l0-I/AAAAAAAAABM/QmmftIaiv7w/w861-h497-no/gitlab-login.PNG)
+![Gitlab sign in](/assets/cooperation/gitlab/jian_zhi_zhuan_shu_zi_ji_de_github_zhi_gitlab/gitlab-login.PNG)
 
 
 參考資料：
@@ -140,5 +140,3 @@ Gitlab也需要伺服器來運作，可以選擇[Nginx](http://nginx.org/)，但
 [Gitlab官網](http://gitlab.org/)
 
 > Jun 28th, 2013 1:46:00pm
-
-> gitlab

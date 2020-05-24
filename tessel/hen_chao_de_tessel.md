@@ -2,7 +2,7 @@
 
 # Tessel
 
-![Tessel](https://lh3.googleusercontent.com/-aF713dMFP8Q/VT5WW02dTJI/AAAAAAAABR4/KRuiR-h1v-w/w1125-h844-no/IMG_2305.JPG)
+![Tessel](/assets/tessel/hen_chao_de_tessel/IMG_2305.JPG))
 
 這個夢寐以求的版子，終於狠下心進口了！只是這小玩意兒的身世有點可憐，竟然被郵差送錯地方...而那個人也很奇怪，東西不是自己的也收下來了！還拆封！！！到底是為什麼敢拆不是自己的東西！！驗收到凌晨4點...好險東西都正常。
 
@@ -58,7 +58,7 @@ OK，執行成功就會看到藍綠兩個燈在閃爍！
 	INFO Running script...
 	I'm blinking! (Press CTRL + C to stop)
 	
-![example](https://lh4.googleusercontent.com/-Spnmn4W5bFk/VT5WbPV-5wI/AAAAAAAABSA/7zqTWl7a364/w771-h1028-no/IMG_2308.JPG)
+![example](/assets/tessel/hen_chao_de_tessel/IMG_2308.JPG)
 
 Tessel 真的不錯，除了程式語言可以用比較熟悉的 Javascript，Module 也用`npm`管理，很順暢。整個在水準之上，看得出來團隊很用心的在開發，而我也預購了 Tessel 2 的新版子，因為我覺得非常棒。
 

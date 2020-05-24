@@ -16,15 +16,17 @@ Ghost允許線上用[Markdown][5]編輯文章，不像Octopress得依靠Command 
 
 接著五個步驟就完成了。
 
-	$ wget 'https://en.ghost.org/zip/ghost-0.3.2.zip'
-	$ unzip ghost-0.3.2.zip -d ghost
-	$ cd ghost
-	$ npm install --production
-	$ npm start
+```
+$ wget 'https://en.ghost.org/zip/ghost-0.3.2.zip'
+$ unzip ghost-0.3.2.zip -d ghost
+$ cd ghost
+$ npm install --production
+$ npm start
+```
 
 這樣就可以run囉!!簡單到炸掉阿...
 
-![build ghost](https://lh6.googleusercontent.com/-t4pgaIGM3Lc/Ul7DHxzJiRI/AAAAAAAAAPo/nQFwEo0yeQE/w738-h626-no/build+ghost.png)
+![build ghost](/assets/mix/zou_zai_shi_shang_de_jian_7aef21_ghost/build_ghost.png)
 
 畫面非常乾淨漂亮。
 
@@ -32,13 +34,15 @@ Ghost允許線上用[Markdown][5]編輯文章，不像Octopress得依靠Command 
 
 輸入網址`http://your-domain/ghost`就可以註冊一個admin的帳號。
 
-![admin sign](https://lh4.googleusercontent.com/-mvFx6OlulEg/Ul7DIEy9HqI/AAAAAAAAAPs/4QLZ4T-Fxi0/w779-h543-no/admin+sign.png)
+![admin sign](/assets/mix/zou_zai_shi_shang_de_jian_7aef21_ghost/admin_sign.png)
 
 ## 設定config.js
 
 網站目錄底下有個config.js，若沒有則自己複製一份。
 
-	$ cp -a config.example.js config.js
+```
+$ cp -a config.example.js config.js
+```
 
 這邊將全部的`my-ghost-blog.com`替換成自己的domain。
 
@@ -46,19 +50,27 @@ Ghost允許線上用[Markdown][5]編輯文章，不像Octopress得依靠Command 
 
 若是使用`npm start`啟動，會有點難管理，而且nodejs最為人詬病的就是不friendly。所以這邊我是使用[PM2](7)。Github上有很詳細的安裝方式，就不再說明。應用在Ghost則可以執行。
 
-	$ pm2 start ghost/index.js
+```
+$ pm2 start ghost/index.js
+```
 
 看執行中的程式
 
-	$ pm2 list
+```
+$ pm2 list
+```
 
 看程式負載
 
-	$ pm2 monit
+```
+$ pm2 monit
+```
 
 也可以看log
 
-	$ pm2 logs
+```
+$ pm2 logs
+```
 
 [1]: https://en.ghost.org/
 [2]: https://http://octopress.org//

@@ -141,5 +141,3 @@ JobTracker：http://localhost:50030/
 [http://forum.icst.org.tw/phpbb/viewtopic.php?f=10&t=17974](http://forum.icst.org.tw/phpbb/viewtopic.php?f=10&t=17974)
 
 > Jun 13th, 2013 11:12:00pm
-
-> centos, hadoop

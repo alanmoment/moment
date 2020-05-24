@@ -79,5 +79,3 @@
 [http://forum.icst.org.tw/phpbb/viewtopic.php?f=21&t=19565](http://forum.icst.org.tw/phpbb/viewtopic.php?f=21&t=19565)
 
 > Jun 15th, 2013 12:57:00am
-
-> centos, hbase

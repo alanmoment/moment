@@ -7,9 +7,11 @@
 
 官網有提供[Phalcon framework](http://docs.phalconphp.com/en/1.0.0/reference/install.html#linux-solaris-mac)的Github可以下載
 
-	$ git clone git://github.com/phalcon/cphalcon.git
-	$ cd cphalcon/build
-	$ ./install
+```
+$ git clone git://github.com/phalcon/cphalcon.git
+$ cd cphalcon/build
+$ ./install
+```
 
 安裝畫面
 
@@ -18,19 +20,25 @@
 ### 安裝便利的Phalcon Developer Tools
 
 Phalcon一樣有提供[Phalcon Developer Tools](http://docs.phalconphp.com/en/latest/reference/linuxtools.html)的Github下載
-	
-	$ git clone https://github.com/phalcon/phalcon-devtools.git
-	$ cd phalcon-devtools
-	$ ./phalcon.sh
+
+```
+$ git clone https://github.com/phalcon/phalcon-devtools.git
+$ cd phalcon-devtools
+$ ./phalcon.sh
+```
 
 建立softlink
 
-	$ ln -s /home/phalcon/phalcon-devtools/phalcon.php /usr/bin/phalcon
-	$ chmod ugo+x /usr/bin/phalcon
+```
+$ ln -s /home/phalcon/phalcon-devtools/phalcon.php /usr/bin/phalcon
+$ chmod ugo+x /usr/bin/phalcon
+```
 
 安裝完畢後重新登入執行測試
 
-	$ phalcon commands
+```
+$ phalcon commands
+```
 
 執行畫面
 
@@ -40,7 +48,9 @@ Phalcon一樣有提供[Phalcon Developer Tools](http://docs.phalconphp.com/en/la
 
 使用指令建立一個專案
 
-	$ phalcon create-project phalcon
+```
+$ phalcon create-project phalcon
+```
 
 ![phalcon create-project phalcon](https://lh5.googleusercontent.com/-EB4pamSa3CA/UcEyQ7MKXVI/AAAAAAAAAA4/NgM7_Mz4hjM/w477-h168-no/cphalcon-create-project.PNG)
 

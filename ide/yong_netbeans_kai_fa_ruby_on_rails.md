@@ -12,21 +12,21 @@ NetBeans除了能開發PHP、Java、..等等的這些程式語言，其實也早
 
 Tools→Plugins
 
-![plugins](https://lh4.googleusercontent.com/-pW5jRlN8K2o/UcVfYNXsvjI/AAAAAAAAAB0/KXIKyjfIzcs/w965-h827-no/netbeans-ror-plugin.PNG)
+![plugins](/assets/ide/yong_netbeans_kai_fa_ruby_on_rails/netbeans-ror-plugin.PNG)
 
 在安裝其他的plugins之前，必須先選擇安裝org-jruby-jruby.jar，讓NetBeans可以支援Ruby
 
-![org-jruby-jruby.jar](https://lh5.googleusercontent.com/-H4CXHOcRxvk/UcVfYEQYiTI/AAAAAAAAAB8/3DOZiUqpb-o/w942-h827-no/netbeans-ror-plugin-1.PNG)
+![org-jruby-jruby.jar](/assets/ide/yong_netbeans_kai_fa_ruby_on_rails/netbeans-ror-plugin-1.PNG)
 
 再來安裝其他的plugins就不會出現錯誤訊息
 
-![Ruby and Rails plugins](https://lh4.googleusercontent.com/-9t0LTCB8sAo/UcVfYquTLAI/AAAAAAAAACA/8IeYPpbY-gU/w971-h827-no/netbeans-ror-plugin-2.PNG)
+![Ruby and Rails plugins](/assets/ide/yong_netbeans_kai_fa_ruby_on_rails/netbeans-ror-plugin-2.PNG)
 
 全部安裝完畢後，就可以在功能選項中建立Ruby On Rails的Application囉。
 
 File→New Project
 
-![New Project](https://lh6.googleusercontent.com/-AbB-Sg-KbrE/UcVg8LIWKII/AAAAAAAAACc/7E2iTH382Ec/w909-h827-no/%25E6%2593%25B7%25E5%258F%2596.PNG)
+![New Project](/assets/ide/yong_netbeans_kai_fa_ruby_on_rails/image1.PNG)
 
 雖然我使用NetBeans已經很長一段時間了，但是主要用他來開發PHP，開發PHP是很好用沒錯。要用他來開發RoR是有點勉強阿...
 
@@ -40,15 +40,21 @@ File→New Project
 
 ![](/assets/ide/netbeans_consolezhong_wen_luan_ma_jie_jue_fang_fa/netbeans_problem.png)
 
-	WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+```
+WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+```
 
 在C:\RailsInstaller\Ruby1.9.3\lib\ruby\1.9.1\webrick\httpresponse.rb搜尋
 
-	if chunked? || @header['content-length']
+```
+if chunked? || @header['content-length']
+```
 
 替換為
 
-	if chunked? || @header['content-length'] || @status == 304 || @status == 204
+```
+if chunked? || @header['content-length'] || @status == 304 || @status == 204
+```
 
 即可解決
 
@@ -58,25 +64,31 @@ File→New Project
 
 當更改固定首頁的時候出現錯誤訊息如下
 
-	ExecJS::RuntimeError in Home#index
+```
+ExecJS::RuntimeError in Home#index
+```
 
 可以到C:\RailsInstaller\Ruby1.9.3\lib\ruby\gems\1.9.1\gems\execjs-1.4.0\lib\execjs\runtimes.rb搜尋cscript //E:jscript //Nologo //U
 
-	JScript = ExternalRuntime.new(
-		:name        => "JScript",
-		:command     => "cscript //E:jscript //Nologo //U",
-		:runner_path => ExecJS.root + "/support/jscript_runner.js",
-		:encoding    => 'UTF-16LE' # CScript with //U returns UTF-16LE
-	)
+```
+JScript = ExternalRuntime.new(
+	:name        => "JScript",
+	:command     => "cscript //E:jscript //Nologo //U",
+	:runner_path => ExecJS.root + "/support/jscript_runner.js",
+	:encoding    => 'UTF-16LE' # CScript with //U returns UTF-16LE
+)
+```
 
 替換成
 
-    JScript = ExternalRuntime.new(
-        :name        => "JScript",
-        :command     => "cscript //E:jscript //Nologo",
-        :runner_path => ExecJS.root + "/support/jscript_runner.js",
-        :encoding    => 'UTF-8' # CScript with //U returns UTF-16LE
-    )
+```
+JScript = ExternalRuntime.new(
+		:name        => "JScript",
+		:command     => "cscript //E:jscript //Nologo",
+		:runner_path => ExecJS.root + "/support/jscript_runner.js",
+		:encoding    => 'UTF-8' # CScript with //U returns UTF-16LE
+)
+```
 
 參考：[http://stackoverflow.com/questions/14283465/issue-with-upgrade-to-rails-3-2-11-execjsruntimeerror-in-static-pageshome](http://stackoverflow.com/questions/14283465/issue-with-upgrade-to-rails-3-2-11-execjsruntimeerror-in-static-pageshome)
 

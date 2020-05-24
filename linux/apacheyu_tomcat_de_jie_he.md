@@ -14,16 +14,20 @@ Google到爛掉我終於找到一個太符合我這個懶人的方式了..非常
 
 然後在http.conf加入設定(我的是httpd-vhosts.conf)
 
-	$ vim /etc/httpd/conf.d/httpd-vhosts.conf
-	<virtualhost>
-		ServerName school.ocomm.com.tw
-		ProxyPass / http://school.ocomm.com.tw:8080/
-		ProxyPassReverse / http://school.ocomm.com.tw:8080/
-	</virtualhost>
+```
+$ vim /etc/httpd/conf.d/httpd-vhosts.conf
+<virtualhost>
+	ServerName school.ocomm.com.tw
+	ProxyPass / http://school.ocomm.com.tw:8080/
+	ProxyPassReverse / http://school.ocomm.com.tw:8080/
+</virtualhost>
+```
 
 然後
 
-	$ service httpd restart
+```
+$ service httpd restart
+```
 
 完成....用到現在沒甚麼問題，等有問題再說吧!! 哈...
 
