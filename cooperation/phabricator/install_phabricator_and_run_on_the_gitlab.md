@@ -91,7 +91,7 @@ clone下來最好就在libphutil、arcanist、phabricator先執行`git pull`因�
 
 更新完畢後再回去網頁，會看到登入畫面。
 
-![phabricator login](https://lh6.googleusercontent.com/-GZGTc_c_H60/UjPO6XVPPxI/AAAAAAAAANI/kZd9o6ikoBI/w625-h363-no/phabricator+login.PNG)
+![phabricator login](/assets/cooperation/phabricator/install_phabricator_and_run_on_the_gitlab/phabricator_login.PNG)
 
 ### 設定Admin帳號
 
@@ -192,15 +192,15 @@ Track Only: your want track branches
 
 設定完就可以看到
 
-![phabricator create repository](https://lh3.googleusercontent.com/-H6cqwJTAqHE/UjPUxN_KEUI/AAAAAAAAAOA/leM_LS0c-TM/w728-h144-no/phabricator+create+repository.PNG)
+![phabricator create repository](/assets/cooperation/phabricator/install_phabricator_and_run_on_the_gitlab/phabricator_create_repository.PNG)
 
 點選View in Diffusion可以看到這個repository的各種記錄
 
-![phabricator repository track](https://lh5.googleusercontent.com/-fQ63RarVr1w/UjPUxJE_kbI/AAAAAAAAAOE/N4NBlpizxfk/w734-h359-no/phabricator+repository+track.PNG)
+![phabricator repository track](/assets/cooperation/phabricator/install_phabricator_and_run_on_the_gitlab/phabricator_repository_track.PNG)
 
 若在某一次的記錄review code發現有問題都可以在diffusion > Raise Concern，回報都會有紀錄存在直到消除Raise Concern。
 
-![phabricator repository track tree](https://lh5.googleusercontent.com/-WxJOEJ46aEw/UjPUxNn6-tI/AAAAAAAAAOM/spYFikhEsNY/w951-h465-no/phabricator+repository+track+tree.PNG)
+![phabricator repository track tree](/assets/cooperation/phabricator/install_phabricator_and_run_on_the_gitlab/phabricator_repository_track_tree.PNG)
 
 [Scrum]: http://zh.wikipedia.org/wiki/Scrum
 

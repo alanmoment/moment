@@ -136,7 +136,7 @@
 
 打開瀏覽器訪問 `http://phabricator.example.tw/conduit/token/`，並且登入要連結  Phabricator 上的 user。
 
-![arc-certificate](https://lh6.googleusercontent.com/-hX7Vm3ypy88/UuCUgsmq8nI/AAAAAAAAAT4/Bq0OMZYA2mU/w460-h156-no/arc-certificate.png)
+![arc-certificate](/assets/cooperation/phabricator/phabricator_review_codeying_yong/arc-certificate.png)
 
 取得 `Token`，並且輸入上一步驟的設定。
 
@@ -223,21 +223,21 @@
 
 這邊個資訊是在告知提交的資訊中沒有交代要 test，及 review 版號是 `D21` 包含改變的檔案清單，這樣就完成了 client 的提交。因為在 `Reviewers:` 填寫的是 webuser，所以他會收到通知。
 
-![arc-notify](https://lh4.googleusercontent.com/-esNawwysI7g/Ut_0-iPpasI/AAAAAAAAATA/wEgEE2lBVRA/w261-h256-no/arc-5.png)
+![arc-notify](/assets/cooperation/phabricator/phabricator_review_codeying_yong/arc-5.png)
 
 接下來就可以看到詳細的資料，alan 改變了檔案提交了程式碼，webuser 需要透過介面完成審核。
 
-![arc-review](https://lh4.googleusercontent.com/-30M4l50gT6c/Ut_0_DxHvAI/AAAAAAAAATQ/qN_v2d_etmQ/w873-h695-no/arc-6.png)
+![arc-review](/assets/cooperation/phabricator/phabricator_review_codeying_yong/arc-6.png)
 
 ![arc-accpet](https://lh5.googleusercontent.com/-EqVMMQ9dX7E/Ut_0_FUy3OI/AAAAAAAAATc/qHngTiTYrv0/w1118-h443-no/arc-7.png)
 
 當 webuser 完成了審核，同意了。alan 也會收到通過的通知。
 
-![arc-review-ok](https://lh5.googleusercontent.com/-FzlWUBHHbfk/Ut_0_oTJkgI/AAAAAAAAATU/DZiIftPyReM/w1116-h248-no/arc-8.png)
+![arc-review-ok](/assets/cooperation/phabricator/phabricator_review_codeying_yong/arc-7.png)
 
 alan 也可以看到詳細的資訊。
 
-![arc-review-ok-info](https://lh5.googleusercontent.com/-REugV9t8ecQ/Ut_1AEqY7sI/AAAAAAAAATg/ovYLQ-R2BFk/w1117-h550-no/arc-9.png)
+![arc-review-ok-info](/assets/cooperation/phabricator/phabricator_review_codeying_yong/arc-9.png)
 
 這時候就可以把改變的檔案 push 上版本庫，若是按正常流程要 `git add`, `git commit`，但是在這邊只需要執行
 
@@ -273,7 +273,7 @@ alan 也可以看到詳細的資訊。
 
 這樣就完成囉!! 回到網站介面可以發現，版本庫中已經完成一次提交。
 
-![arc-down](https://lh6.googleusercontent.com/-3mu-9kQ6Yk0/UuChnswR1tI/AAAAAAAAAVU/zQIqWUAwhFA/w839-h265-no/arc-down.png)
+![arc-down](/assets/cooperation/phabricator/phabricator_review_codeying_yong/arc-down.png)
 
 [1]: /post/94171590878/install-phabricator-and-run-on-the-gitlab
 [2]: http://www.phabricator.com/docs/phabricator/article/Diffusion_User_Guide_Repository_Hosting.html
