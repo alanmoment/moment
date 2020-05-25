@@ -11,7 +11,7 @@ https://www.thingiverse.com/thing:2179768
 ## 列印機種
 
 1. 列印機種：ATOM 2.5 EX
-2. 切片軟體 CURA 3.1
+2. 切片軟體：CURA 3.1
 3. ATOM 原廠 PLA
   - 常用列印溫度 190
   - 常用起始列印溫度 195

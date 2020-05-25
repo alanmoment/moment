@@ -128,7 +128,7 @@ JobTracker：http://localhost:50030/
 	localhost: stopping datanode
 	localhost: stopping secondarynamenode
 
-## 發生錯誤 ##
+## 發生錯誤
 
 1. 有關於IP位址的都需要用網域取代否則會讀不到
 

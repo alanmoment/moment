@@ -50,7 +50,7 @@ $ /opt/sqoop/bin/sqoop import --connect jdbc:mysql://127.0.0.1/test --username t
 
 因為操作Sqoop是有點煩瑣的，所以我自己用PHP寫了[Mysql匯入Hbase](http://demo.ocomm.com.tw/hadoop)的簡單操作界面。
 
-## 發生錯誤 ##
+## 發生錯誤
 
 無法從mysql匯入hbase
 

@@ -132,7 +132,7 @@ $ /opt/hbase/bin/hbase thrift start
 $ cp /opt/hbase/src/examples/thrift/DemoClient.php /var/www/hbase/DemoClient.php
 ```
 
-## 發生錯誤 ##
+## 發生錯誤
 
 發生過無法啟動的時候，我是重新複製lib
 
