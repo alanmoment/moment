@@ -8,6 +8,9 @@
   * [Atom2.5EX 之血淚組裝](3dprinter/atom2.5ex/assemble.md)
   * [列印經驗紀錄](3dprinter/example/README.md)
     * [SpoolHolder](3dprinter/example/SpoolHolder.md)
+  * 線材經驗
+    * PETG
+      * [首測](3dprinter/material/PETG/first_test.md)
 * [Kubernetes](kubernetes/README.md)
   * [使用Kops建立Kubernetes](kubernetes/kops/build_cluster_with_kops.md)
   * [使用HelmV2](kubernetes/helm/create_helmv2.md)
