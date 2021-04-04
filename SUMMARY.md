@@ -10,6 +10,7 @@
     * [SpoolHolder](3dprinter/example/SpoolHolder.md)
   * 製圖經驗
     * [Turntable](3dprinter/design/turntable.md)
+    * [重製Atom3散熱風扇](3dprinter/design/cooling-fan-upgrade.md)
   * 線材經驗
     * PETG
       * [首測](3dprinter/material/PETG/first_test.md)
