@@ -81,7 +81,7 @@ Atom3 從 2019年拿到至今，邁入第三年。期間大大小小的問題，
 
 細修之後，這次就是心目中完美的一版了
 
-![](/assets/3dprinter/design/cooling-fan-upgrade/fan-back-v10.jpg)
+![](/assets/3dprinter/design/cooling-fan-upgrade/fan-v8.jpg)
 
 裝到後吹的散熱風扇...不可能一切那麼順利的，多列印了一個之後，發現後方的風扇位置根本跟前面兩個完全不一樣...所以必須要重新設計...
 
