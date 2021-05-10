@@ -2,7 +2,7 @@
 
 最近的網路攻擊超級猖狂的，因為工作的關係，其實我已經具備一定的危機意識了。所以家裡原本就有一台 FortiGate 60D 擋在最前面，做一個基本的防護。在過去也沒什麼特別設定，但是最近 [Qnap](https://www.qnap.com/zh-tw/security-news/2021/%E5%9B%9E%E6%87%89-qlocker-%E5%8B%92%E7%B4%A2%E7%97%85%E6%AF%92%E6%94%BB%E6%93%8A%E4%BA%8B%E4%BB%B6%E7%AB%8B%E5%8D%B3%E6%8E%A1%E5%8F%96%E8%A1%8C%E5%8B%95%E4%BF%9D%E8%AD%B7-qnap-nas) 的設備一直被攻擊，好多人珍貴的檔案都被加密了。讓我不得不重新審視家裡的網路安全。
 
-所以過去沒特別鎖定連入 VPN 的位置與 IP ，在這次特別設定。也把 log 都打開，在第一時間就能收到警告。而[資料備份三二一原則](life/photo_backup_solution/photo_backup_solution.md)也是基本的
+所以過去沒特別鎖定連入 VPN 的位置與 IP ，在這次特別設定。也把 log 都打開，在第一時間就能收到警告。而[資料備份三二一原則](https://alanmoment.gitbook.io/moment/life/photo_backup_solution)也是基本的
 
 ## FortiGate 設定 VPN policy 之後沒有反應
 
