@@ -58,7 +58,9 @@ Step 3.
 
 在<dependencies></dependencies>\>標籤中加入
 
+```
 	<dependency><groupid>com.google.code.gson</groupid><artifactid>gson</artifactid><version>2.2.4</version></dependency>
+```
 
 在project中Maven Dependencies就會增加gson library
 
@@ -74,61 +76,78 @@ Step 3.
 
 在`<project></project>`標籤中加入
 
+```
 	<build><resources><resource><directory>src/main/resources</directory><includes><include>zipcode.json</include></includes></resource></resources></build>
+```
 
 ### 建立Zipcode Library
 
 建立InputStreamReader讀取json資料，再用gson解析讀取完畢再關掉。
 因為gson會主動幫字串加上雙引號，所以取資料出來必須要用getAsString()，不能用toString()，否則雙引號不會濾掉。
 
-	package com.zipcode_util;
-	
-	import java.io.BufferedReader;
-	import java.io.IOException;
-	import java.io.InputStreamReader;
-	
-	import com.google.gson.Gson;
-	import com.google.gson.JsonArray;
-	import com.google.gson.JsonObject;
-	
-	public class ZipcodeComponent {
-	
-		private static final String ZIPCODE_FILE = "zipcode.json";
-		private static JsonObject jsonObject;
-	
-		/**
-		 * Json file io
-		 * @return JsonObject jsonObject
-		 */
-		private JsonObject getJsonObject()
-		{
-			if (jsonObject == null) {
-				BufferedReader br = new BufferedReader(
-						new InputStreamReader(ZipcodeComponent.class
-								.getClassLoader().getResourceAsStream(
-										ZipcodeComponent.ZIPCODE_FILE)));
-				jsonObject = new Gson().fromJson(br, JsonObject.class);
-	
-				try {
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+```
+package com.zipcode_util;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+public class ZipcodeComponent {
+
+	private static final String ZIPCODE_FILE = "zipcode.json";
+	private static JsonObject jsonObject;
+
+	/**
+	 * Json file io
+	 * @return JsonObject jsonObject
+	 */
+	private JsonObject getJsonObject()
+	{
+		if (jsonObject == null) {
+			BufferedReader br = new BufferedReader(
+					new InputStreamReader(ZipcodeComponent.class
+							.getClassLoader().getResourceAsStream(
+									ZipcodeComponent.ZIPCODE_FILE)));
+			jsonObject = new Gson().fromJson(br, JsonObject.class);
+
+			try {
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-	
-			return jsonObject;
 		}
-	
-		/**
-		 * Get city name
-		 * @return List<string> citys
-		 */
-		public String[] listCities()
+
+		return jsonObject;
+	}
+
+	/**
+	 * Get city name
+	 * @return List<String> citys
+	 */
+	public String[] listCities()
+	{
+		JsonArray jsonArray = getJsonObject().getAsJsonArray("city");
+
+		String[] cities = new String[jsonArray.size()];
+		int i;
+		for (i=0; i<jsonArray.size(); i++)
 		{
-			JsonArray jsonArray = getJsonObject().getAsJsonArray("city");
-	
-			String[] cities = new String[jsonArray.size()];
-			int i;
-			for (i=0; i<jsonarray.size i cities jsonarray.get return zipcode util package com.zipcode_util import junit.framework.test junit.framework.testcase junit.framework.testsuite unit test for simple app. public class apptest extends testcase create the case testname name of string super zipcodecomponent system.out.println suite tests being tested static new testsuite apptest.class rigourous :- void testapp asserttrue true tree plugin tool mvn clean install project></jsonarray.size></string>
+			cities[i] = jsonArray.get(i).getAsJsonObject().get("name").getAsString();
+		}
+		return cities;
+	}
+
+	public String getCityName(Integer cityCode) {
+		JsonArray jsonArray = getJsonObject().getAsJsonArray("city");
+		return jsonArray.get(cityCode).getAsJsonObject().get("name")
+				.getAsString();
+	}
+
+}
+```
 
 > Sep 3rd, 2013 6:50:00pm

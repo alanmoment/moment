@@ -15,89 +15,93 @@
 ## Usage
 
 我自己寫一隻方便使用的Base
-	
-	/**
-	 * ImageLoader Base
-	 *
-	 * @author Alan
-	 * @since 2013/09/06
-	 */
-	public class BaseImageLoader {
-	
-	    private static ImageLoader imageLoader;
-	    private static DisplayImageOptions options;
-	
-	    private String path = "loader_cache";
-	    private int stubImage = R.drawable.default;
-	    private int emptyImage = R.drawable.default;
-	    private int failImage = R.drawable.default;
-	    private int fadeInTimestamp = 500;
-	
-	    public BaseImageLoader(Context context) {
-	        File cacheDir = StorageUtils.getOwnCacheDirectory(context, path);
-	        imageLoader = com.nostra13.universalimageloader.core.ImageLoader.getInstance();
-	        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
-	                .discCache(new UnlimitedDiscCache(cacheDir)) // 存在SDcard
-	                .discCacheFileNameGenerator(new HashCodeFileNameGenerator())
-	                .discCacheExtraOptions(480, 800, Bitmap.CompressFormat.JPEG, 75, null)
-	                .discCacheSize(50 * 1024 * 1024) // 快取圖片尺寸
-	                .discCacheFileCount(100) // 快取數量
-	                .build();
-	        imageLoader.init(config);
-	    }
-	
-	    public void setPath(String path) {
-	        this.path = path;
-	    }
-	
-	    public void setStubImage(int stubImage) {
-	        this.stubImage = stubImage;
-	    }
-	
-	    public void setEmptyImage(int emptyImage) {
-	        this.emptyImage = emptyImage;
-	    }
-	
-	    public void setFailImage(int failImage) {
-	        this.failImage = failImage;
-	    }
-	
-	    /**
-	     * 清除暫存檔
-	     */
-	    public void clear() {
-	        imageLoader.clearDiscCache();
-	        imageLoader.clearMemoryCache();
-	    }
-	
-	    public ImageLoader getImageLoader() {
-	        return imageLoader;
-	    }
-	
-	    public DisplayImageOptions getOptions() {
-	        options = new DisplayImageOptions.Builder()
-	                .showStubImage(stubImage) // 載入中顯示的圖片
-	                .showImageForEmptyUri(emptyImage) // 找不到連結或是錯誤顯示的圖片
-	                .showImageOnFail(failImage) // 圖片解碼錯誤顯示的圖片
-	                .imageScaleType(ImageScaleType.EXACTLY) // 圖片縮放方式
-	                .cacheInMemory(true)
-	                .cacheOnDisc(true)
-	//                .displayer(new RoundedBitmapDisplayer(20)) // 載入的圖片加工圓角
-	                .displayer(new FadeInBitmapDisplayer(fadeInTimestamp)) // 設置圖片漸顯的時間
-	//                .displayer(new SimpleBitmapDisplayer()) // 正常顯示一張圖片
-	                .build();
-	        return options;
-	    }
-	}
+
+```
+/**
+	* ImageLoader Base
+	*
+	* @author Alan
+	* @since 2013/09/06
+	*/
+public class BaseImageLoader {
+
+		private static ImageLoader imageLoader;
+		private static DisplayImageOptions options;
+
+		private String path = "loader_cache";
+		private int stubImage = R.drawable.default;
+		private int emptyImage = R.drawable.default;
+		private int failImage = R.drawable.default;
+		private int fadeInTimestamp = 500;
+
+		public BaseImageLoader(Context context) {
+				File cacheDir = StorageUtils.getOwnCacheDirectory(context, path);
+				imageLoader = com.nostra13.universalimageloader.core.ImageLoader.getInstance();
+				ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+								.discCache(new UnlimitedDiscCache(cacheDir)) // 存在SDcard
+								.discCacheFileNameGenerator(new HashCodeFileNameGenerator())
+								.discCacheExtraOptions(480, 800, Bitmap.CompressFormat.JPEG, 75, null)
+								.discCacheSize(50 * 1024 * 1024) // 快取圖片尺寸
+								.discCacheFileCount(100) // 快取數量
+								.build();
+				imageLoader.init(config);
+		}
+
+		public void setPath(String path) {
+				this.path = path;
+		}
+
+		public void setStubImage(int stubImage) {
+				this.stubImage = stubImage;
+		}
+
+		public void setEmptyImage(int emptyImage) {
+				this.emptyImage = emptyImage;
+		}
+
+		public void setFailImage(int failImage) {
+				this.failImage = failImage;
+		}
+
+		/**
+			* 清除暫存檔
+			*/
+		public void clear() {
+				imageLoader.clearDiscCache();
+				imageLoader.clearMemoryCache();
+		}
+
+		public ImageLoader getImageLoader() {
+				return imageLoader;
+		}
+
+		public DisplayImageOptions getOptions() {
+				options = new DisplayImageOptions.Builder()
+								.showStubImage(stubImage) // 載入中顯示的圖片
+								.showImageForEmptyUri(emptyImage) // 找不到連結或是錯誤顯示的圖片
+								.showImageOnFail(failImage) // 圖片解碼錯誤顯示的圖片
+								.imageScaleType(ImageScaleType.EXACTLY) // 圖片縮放方式
+								.cacheInMemory(true)
+								.cacheOnDisc(true)
+//                .displayer(new RoundedBitmapDisplayer(20)) // 載入的圖片加工圓角
+								.displayer(new FadeInBitmapDisplayer(fadeInTimestamp)) // 設置圖片漸顯的時間
+//                .displayer(new SimpleBitmapDisplayer()) // 正常顯示一張圖片
+								.build();
+				return options;
+		}
+}
+```
 
 有了這隻Base的在外面呼叫只需要
 
-	// 建立Base物件
-    BaseImageLoader baseImageLoader = new BaseImageLoader(this);
+```
+// 建立Base物件
+BaseImageLoader baseImageLoader = new BaseImageLoader(this);
 
-	// 顯示圖片
-	ImageView image = (ImageView) convertView.findViewById(R.id.photo);
-	baseImageLoader.getImageLoader().displayImage(item.getCover(), image, baseImageLoader.getOptions());
+// 顯示圖片
+ImageView image = (ImageView) convertView.findViewById(R.id.photo);
+baseImageLoader.getImageLoader().displayImage(item.getCover(), image, baseImageLoader.getOptions());
+```
 
 打完收工。用了這個套件，我一次下載幾千張圖片，都不會有閃退的情況了。而且它有很多特性非常方便，諸如圖片圓角、載入中的顯示、找不到圖片的顯示等等，我只列出我需要用到的。
 
