@@ -24,13 +24,14 @@ So your policy would look like (this will block ALL access from Ban_IP (only) to
 
 ```
 config firewall local-in-policy
-  edit 0
+  edit 1
   set intf "wan1"
   set srcaddr "Ban_IP"
   set dstaddr "all"
   set service "ALL"
   set schedule "always"
   set action deny
+  set status enable
   next
 end
 ```
@@ -39,13 +40,23 @@ end
 
 ```
 config firewall local-in-policy
-  edit 1
+  edit 2
   set intf "wan1"
   set srcaddr "ONLY_TAIWAN"
   set dstaddr "all"
   set service "ALL"
   set schedule "always"
   set action accept
+  set status enable
   next
+end
+```
+
+### 錯誤嘗試鎖定機制
+
+```
+config vpn ssl settings
+  set login-attempt-limit 3          <----- Replace number of attempt to allow in place of x.
+  set login-block-time 3600             <----- Replace number of seconds to block attempt in place of y.
 end
 ```
