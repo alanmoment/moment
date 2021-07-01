@@ -161,7 +161,7 @@ php -S 0.0.0.0:8000 index.php &
 
 ![](/assets/smart_home/cheap_ipcam_integration/1-5.png)
 
-然後在 Device 的詳細資訊中選擇 `http` 並且填入剛剛在瀏覽器輸入的網址，基本上就可以在 Fibaro 的畫面看到囉！
+然後在 Device 的詳細資訊中選擇 `http` 並且填入剛剛在瀏覽器輸入的網址，就可以在 Fibaro 的系統中看到 IP Cam 的畫面看到囉！
 
 ![](/assets/smart_home/cheap_ipcam_integration/1-6.png)
 
