@@ -1,6 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
+* [智慧家庭](smart_home/README.md)
+  * [Fibaro 系統整合便宜的 IP Cam](smart_home/cheap_ipcam_integration.md)
 * [Life](life/README.md)
   * [用AWS Glacier做最後的冷資料備份](life/photo_backup_solution/photo_backup_solution.md)
   * [如何在macOS修改影音檔日期](life/update_date_on_mac/update_date_on_mac.md)

@@ -161,7 +161,7 @@ if [ ! -f $HIVE_BIN ]; then
 	echo "File not found: $HIVE_BIN"
 	exit 1
 fi
-	
+
 # pid file for /sbin/runuser
 pidfile=${PIDFILE-/var/run/hive-thrift.pid}
 # pid file for the java child process.
@@ -191,7 +191,7 @@ start() {
 	echo
 	return $RETVAL
 }
-	
+
 stop() {
 	# check if the process is already stopped by seeing if the pid file exists.
 	if [ ! -f $pidfile_java ]; then
@@ -209,7 +209,7 @@ stop() {
 	echo
 	[ $RETVAL = 0 ] && rm -f ${pidfile} ${pidfile_java}
 }
-	
+
 status_fn() {
 	if [ -f $pidfile_java ] && checkpid `cat $pidfile_java`; then
 		echo "hive-thrift is running"
@@ -262,7 +262,7 @@ Hive CLI（Hive Command Line)Client可以以直接在命令行模式下進行操
 **HWI**
 
 hwi（Hive Web Interface，Hive Web接口），Hive提供了更友善的Web介面
-	
+
 在hive-site.xml的<configuration>添加項目
 
 ```
