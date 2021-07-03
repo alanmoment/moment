@@ -8,9 +8,9 @@
 
 在 GUI 介面設定完畢之後發現根本沒有作用，上網查了一下才發現...
 
-```
-Hi, you cannot block IPSec VPN traffic destined to the Fortigate IP itself with usual Security Rules - they only manage traffic PASSING the Fortigate from one interface to another.   
-To achieve that you need to use Local-in policy (viewable in GUI but editable in CLI only). 
+```txt
+Hi, you cannot block IPSec VPN traffic destined to the Fortigate IP itself with usual Security Rules - they only manage traffic PASSING the Fortigate from one interface to another.
+To achieve that you need to use Local-in policy (viewable in GUI but editable in CLI only).
 So your policy would look like (this will block ALL access from Ban_IP (only) to Fortigate, IPsec VPN, SSL VPN, Admin GUi etc. If you want to block just IPsec, set service accordingly):
 ```
 
@@ -22,7 +22,7 @@ So your policy would look like (this will block ALL access from Ban_IP (only) to
 
 ### BAN 掉一些故意來試的
 
-```
+```conf
 config firewall local-in-policy
   edit 1
   set intf "wan1"
@@ -38,7 +38,7 @@ end
 
 ### 直接鎖定只有台灣的 IP 才可以用 VPN
 
-```
+```conf
 config firewall local-in-policy
   edit 2
   set intf "wan1"
@@ -54,7 +54,7 @@ end
 
 ### 錯誤嘗試鎖定機制
 
-```
+```conf
 config vpn ssl settings
   set login-attempt-limit 3          <----- Replace number of attempt to allow in place of x.
   set login-block-time 3600             <----- Replace number of seconds to block attempt in place of y.

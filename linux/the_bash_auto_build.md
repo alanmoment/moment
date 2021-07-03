@@ -2,11 +2,11 @@
 
 發覺自己在開發上常用的小工具都沒有在整理的，每次要用就都要回想，然後再一個一個找回來覺得很煩。尤其是現在工作上要管理十幾二十台後端。常常在那邊用得不順暢，才驚覺這樣真的不行！！
 
-所以就花了點時間整理，順便用`Shell Script`寫成auto build練習一下。
+所以就花了點時間整理，順便用`Shell Script`寫成 auto build 練習一下。
 
 ### Git
 
-在`setup.sh`的`setup_gitconfig`這個method主要是建立常用的`gitconfig`檔，也區分了家中與工作兩個環境去做建立
+在`setup.sh`的`setup_gitconfig`這個 method 主要是建立常用的`gitconfig`檔，也區分了家中與工作兩個環境去做建立
 
 ### Vim
 
@@ -26,7 +26,9 @@
 
 預設是放在 `/$HOME/bash`，設定上非常簡單
 
-	$ sh setup.sh
+```bash
+sh setup.sh
+```
 
 打完收工！！
 

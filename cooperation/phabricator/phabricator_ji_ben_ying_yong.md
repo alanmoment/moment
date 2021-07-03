@@ -84,44 +84,53 @@ Take these actions every time this rule matches:
 
 郵件伺服器
 
-	phpmailer.mailer
-	Configure mailer used by PHPMailer.
-	Current Value: "smtp"
+```conf
+phpmailer.mailer
+Configure mailer used by PHPMailer.
+Current Value: "smtp"
+```
 
 郵件伺服器 domain
 
-	phpmailer.smtp-host
-	Host for SMTP.
-	Current Value: domain.com.tw
+```conf
+phpmailer.smtp-host
+Host for SMTP.
+Current Value: domain.com.tw
+```
 
 郵件伺服器 port
 
-	phpmailer.smtp-port
-	Port for SMTP.
-	Current Value: 25
+```conf
+phpmailer.smtp-port
+Port for SMTP.
+Current Value: 25
+```
 
 是否加密
 
-	phpmailer.smtp-protocol
-	Configure TLS or SSL for SMTP.
-	Current Value: null
+````conf
+phpmailer.smtp-protocol
+Configure TLS or SSL for SMTP.
+Current Value: null
+``
 
 帳號
 
-	phpmailer.smtp-user
-	Username for SMTP.
-	Current Value: "root"
+```conf
+phpmailer.smtp-user
+Username for SMTP.
+Current Value: "root"
+````
 
 密碼
 
-	phpmailer.smtp-password
-	Password for SMTP.
+```conf
+phpmailer.smtp-password
+Password for SMTP.
+```
 
-Phabricator 建置很久了這兩天才開始在學著用，覺得 [Phabricator][1] 對於 teamwork 的幫助不亞於 [Gitlab][2] ，有時候在合併版本發生衝突的時候才開始在看為什麼會有衝突，總覺得很不爽。所以若能即時知道，團隊裡有誰做了甚麼樣的提交，相信對於開發中以及開發完的上線都會很有幫助。
+Phabricator 建置很久了這兩天才開始在學著用，覺得 [Phabricator](/cooperation/phabricator/install_phabricator_and_run_on_the_gitlab.md) 對於 teamwork 的幫助不亞於 [Gitlab](/cooperation/gitlab/jian_zhi_zhuan_shu_zi_ji_de_github_zhi_gitlab.md) ，有時候在合併版本發生衝突的時候才開始在看為什麼會有衝突，總覺得很不爽。所以若能即時知道，團隊裡有誰做了甚麼樣的提交，相信對於開發中以及開發完的上線都會很有幫助。
 
 但是網路上的資訊有點少，要摸索清楚整個系統有點吃力，每一樣都要 `try error`，文章寫起來也有點凌亂，不管了，慢慢整理吧。
-
-[1]: /post/94171590878/install-phabricator-and-run-on-the-gitlab
-[2]: /post/94170890773/github-gitlab
 
 > Jan 6th, 2014 11:36:00pm
