@@ -4,39 +4,40 @@
 
 只要在自己的 `composer.json` 加上設定檔就可以囉！
 
-```
+```php
 {
-		"repositories": [
-				{
-						"type": "git",
-						"url": "https://github.com/alanmoment/rsa-util.git"
-				}
-		],
-		"require": {
-				"alanmoment/rsa-util": "dev-master"
-		},
-		"minimum-stability": "dev",
-		"autoload": {
-				"classmap": [
-						"vendor/alanmoment"
-				]
-		}    
+  "repositories": [
+      {
+          "type": "git",
+          "url": "https://github.com/alanmoment/rsa-util.git"
+      }
+  ],
+  "require": {
+      "alanmoment/rsa-util": "dev-master"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+      "classmap": [
+          "vendor/alanmoment"
+      ]
+  }
 }
 ```
 
 範例程式碼
 
-```
-# index.php
+index.php
+
+```php
 require __DIR__ . '/vendor/autoload.php';
-	
+
 use Rsa\RsaUtil;
-	
+
 $RsaUtil = new RsaUtil();
 $RsaUtil->setKeyStorePath("./keystores/");
 $encrypt = $RsaUtil->generate()->encrypt("I am test data.");
 echo $encrypt;
-	
+
 $decrypted = $RsaUtil->decrypt($encrypt);
 echo $decrypted;
 ```

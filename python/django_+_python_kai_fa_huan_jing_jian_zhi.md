@@ -1,36 +1,28 @@
 # Django + Python 開發環境建置
 
-# Python
+開發 Pythone 時也可以像 rvm，nvm 的虛擬環境就是 Virtualenv 了，對於我這種有潔癖的人是超級需要的啊！
 
-開發Pythone時也可以像rvm，nvm的虛擬環境就是Virtualenv了，對於我這種有潔癖的人是超級需要的啊！
-
-## Pip
-
----
+## Pip Install
 
 download [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 
+```bash
+python get-pip.py
 ```
-$ python get-pip.py
-```
 
-## Virtualenv
+## Virtualenv Install
 
----
-
-**install**
-
-```
-$ pip install virtualenv
+```bash
+pip install virtualenv
 ```
 
 > Linux or OS X need `sudo`
 
 **setup**
 
-```
-$ virtualenv ENV
-$ source ENV/bin/activate
+```bash
+virtualenv ENV
+source ENV/bin/activate
 ```
 
 啟動 virtualenv，從此只要在 virtualenv 下面安裝的 package 都只會存在于這個 virtualenv 當中。
@@ -44,160 +36,158 @@ $ source ENV/bin/activate
 5. 每個操作都提供允許使用者自訂的 hooks。
 6. 可撰寫容易分享的 extension plugin 系統。
 
-**install**
+安裝
 
-```
-$ pip install virtualenvwrapper
-```
-
-**新增虛擬環境**
-
-```
-$ mkvirtualenv [-i package] [-r requirements_file] [virtualenv options] ENVNAME
+```bash
+pip install virtualenvwrapper
 ```
 
-**設定路徑**
+新增虛擬環境
 
+```bash
+mkvirtualenv [-i package] [-r requirements_file] [virtualenv options] ENVNAME
 ```
+
+設定路徑
+
+```bash
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 ```
 
-**列出所有的虛擬環境**
+列出所有的虛擬環境
 
-```
-$ lsvirtualenv
-```
-
-**移除虛擬環境**
-
-```
-$ rmvirtualenv ENVNAME
+```bash
+lsvirtualenv
 ```
 
-**複製虛擬環境**
+移除虛擬環境
 
-```
-$ cpvirtualenv ENVNAME TARGETENVNAME 
-```
-
-**啟動虛擬環境**
-
-```
-$ workon [environment_name]
+```bash
+rmvirtualenv ENVNAME
 ```
 
-**離開虛擬環境**
+複製虛擬環境
 
+```bash
+cpvirtualenv ENVNAME TARGETENVNAME
 ```
-$ deactivate
+
+啟動虛擬環境
+
+```bash
+workon [environment_name]
+```
+
+離開虛擬環境
+
+```bash
+deactivate
 ```
 
 **Python 3**
 
-```
-$ which python3
-$ mkvirtualenv --python=/usr/bin/python3 python3
+```bash
+which python3
+mkvirtualenv --python=/usr/bin/python3 python3
 ```
 
 如果想要避免 pip 在沒有進入虛擬環境時被使用，可以在 ~/.bashrc 加上：
 
-```
+```bash
 export PIP_REQUIRE_VIRTUALENV=true
 ```
 
 ## Build Django
 
----
-
 **install**
 
-```
-$ pip install django
+```bash
+pip install django
 ```
 
 **requirements**
 
-```
-$ pip install -r requirements.txt
-$ pip freeze > requirements.txt		
+```bash
+pip install -r requirements.txt
+pip freeze > requirements.txt
 ```
 
-** start **
+**start**
 
-```
-$ django-admin.py startproject PROJECT_NAME
+```bash
+django-admin.py startproject PROJECT_NAME
 ```
 
 **run**
 
-```
-$ python manage.py runserver
+```bash
+python manage.py runserver
 ```
 
 **create app**
 
-```
-$ python manage.py startapp APP_NAME
+```bash
+python manage.py startapp APP_NAME
 ```
 
 **model**
 
 settings.py
 
-```
+```python
 INSTALLED_APPS = (
-	...
-	'customer'
-	...
+  ...
+  'customer'
+  ...
 )
 ```
 
 models.py
 
-````
+````pythoon
 class Customer(models.Model):
-		content = models.TextField()
+  content = models.TextField()
 
-		def __unicode__(self):
-				return self.content
+  def __unicode__(self):
+    return self.content
 ```
 
-`first`
+同步資料庫
 
-```     	
-$ python manage.py syncdb
+```bash
+python manage.py syncdb
 ```
 
 `Your models have changes`
 
-```
-$ python manage.py makemigrations
+```bash
+python manage.py makemigrations
 ```
 
 `generate`
 
-```
-$ python manage.py migrate
+```bash
+python manage.py migrate
 ```
 
 `single change`
 
-```
-$ python manage.py makemigrations MODEL
+```bash
+python manage.py makemigrations MODEL
 ```
 
 `rollback`
 
-```
-$ python manage.py migrate system zero
+```bash
+python manage.py migrate system zero
 ```
 
 ## Django TestCase
 
 **console usage**
 
-```
-$ python manage.py test
+```bash
+python manage.py test
 ```
 
 ## Reference
@@ -205,3 +195,4 @@ $ python manage.py test
 http://www.haogongju.net/art/2395132
 
 > Feb 27th, 2015 12:16:10am
+````
