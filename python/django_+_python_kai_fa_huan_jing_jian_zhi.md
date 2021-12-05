@@ -195,4 +195,3 @@ python manage.py test
 http://www.haogongju.net/art/2395132
 
 > Feb 27th, 2015 12:16:10am
-````
