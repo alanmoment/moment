@@ -144,7 +144,7 @@ INSTALLED_APPS = (
 
 models.py
 
-````pythoon
+```pythoon
 class Customer(models.Model):
   content = models.TextField()
 
