@@ -1,7 +1,5 @@
 # Baby Help on Tessel
 
-# 發想
-
 突然想到小朋友在嬰兒時期，常常一個人在房間睡覺，不曉得什麼時候會哭。所以市面上有產品是偵測到嬰兒的哭聲會嗡嗡的叫，套用在 Tessel，我就想到我也可以實現了。
 
 - Tessel
@@ -10,7 +8,7 @@
 
 ![](/assets/tessel/baby_help_on_tessel/IMG_3953.JPG)
 
-# 聲音偵測
+## 聲音偵測
 
 用來偵測嬰兒哭的時候要觸發的事件，還沒有調整範圍。
 
@@ -201,7 +199,7 @@ function powerCycle() {
 }
 ```
 
-# 照片上傳 Slack
+## 照片上傳 Slack
 
 只要偵測到異常，就會觸發照相，然後上傳到 Slack，一整個超愛用 Slack...。相關檔案上傳可以參考[文件](https://api.slack.com/methods/files.upload)，只需要申請一組 [Token](https://api.slack.com/web) 就可以傳到指定的 `channels`，吃了不少苦頭，主要是不熟悉 NodeJS，不過好險最後有找到[參考](https://projects.tessel.io/projects/tesselcam)的。
 
